@@ -33,7 +33,7 @@ const History = () => {
       description:
         "Tipu Sultan’s era (1782–1799) marked a period of strong resistance against British expansion and rapid modernization within the Kingdom of Mysore. He continued the reforms begun by his father, Hyder Ali, by strengthening the army with European-style training, advanced weaponry, and even the early use of rocket artillery. Tipu introduced new revenue systems, encouraged agriculture and trade, and developed state-run industries to boost the economy. He also maintained alliances with France and other Indian powers to resist British influence, leading to several Anglo-Mysore Wars. However, after prolonged conflict, Tipu Sultan was killed in the Fourth Anglo-Mysore War (1799), and his death marked the end of Mysore’s independent military power.",
       icon: Book,
-      audioUrl: "/audio/tipu-sultan.mp3", // Assuming audio is in public/audio
+      audioUrl: "/audio/tiger-of-mysore.mp3", // Assuming audio is in public/audio
     },
     {
       era: "British Influence",
@@ -51,7 +51,7 @@ const History = () => {
       description:
         "After India gained independence in 1947, Mysore joined the Indian Union, and the Wodeyar king, Jayachamarajendra Wodeyar, served as the first Rajpramukh (state governor) of the newly formed Mysore State. In 1956, with the reorganization of states based on language, the territory expanded and Mysore State came to include Kannada-speaking regions from neighboring areas. Later, in 1973, the state was officially renamed Karnataka to represent its wider cultural and linguistic identity. Modern Mysore is known for its rich heritage, tourism, educational institutions, the IT industry, and cultural festivals like Dasara, which highlight its royal legacy. The city continues to blend tradition with modern development, maintaining its identity as a clean, peaceful, and culturally vibrant region.",
       icon: Crown,
-      audioUrl: "/audio/modern-mysore.mp3", // Assuming audio is in public/audio
+      audioUrl: "/audio/heritage-city.mp3", // Assuming audio is in public/audio
     },
   ];
 

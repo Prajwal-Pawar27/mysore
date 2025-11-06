@@ -21,6 +21,7 @@ const Heritage = () => {
       ],
       timings: "10:00 AM - 5:30 PM",
       bestTime: "Evening illumination on Sundays and holidays",
+      audioUrl: "/audio/mysore-palace.mp3", // Assuming audio is in public/audio
     },
     {
       name: "Chamundi Hills",
@@ -35,6 +36,7 @@ const Heritage = () => {
       ],
       timings: "7:00 AM - 9:00 PM",
       bestTime: "Early morning or sunset for best views",
+      audioUrl: "/audio/chamundi-hills.mp3", // Assuming audio is in public/audio
     },
     {
       name: "Brindavan Gardens",
@@ -49,6 +51,7 @@ const Heritage = () => {
       ],
       timings: "6:00 AM - 9:00 PM",
       bestTime: "Evening for the musical fountain show",
+      audioUrl: "/audio/brindavan-gardens.mp3", // Assuming audio is in public/audio
     },
     {
       name: "St. Philomena's Cathedral",
@@ -63,6 +66,7 @@ const Heritage = () => {
       ],
       timings: "5:00 AM - 6:00 PM",
       bestTime: "Morning mass or during Christmas celebrations",
+      audioUrl: "/audio/st-philomenas-cathedral.mp3", // Assuming audio is in public/audio
     },
     {
       name: "Jaganmohan Palace",
@@ -77,12 +81,13 @@ const Heritage = () => {
       ],
       timings: "8:30 AM - 5:30 PM",
       bestTime: "Morning hours for peaceful exploration",
+      audioUrl: "/audio/jaganmohan-palace.mp3", // Assuming audio is in public/audio
     },
     {
       name: "Lalitha Mahal Palace",
       location: "Nazarbad, Mysuru",
       description:
-        "Built in 1921 for the exclusive stay of the Viceroy of India, this pure white palace resembles London's St. Paul's Cathedral. Now converted into a heritage hotel, it represents Italian Renaissance and Victorian architecture.",
+        "Lalitha Mahal Palace is a grand white palace located near the foothills of Chamundi Hills in Mysore, built in 1921 by the Wodeyar king Krishnaraja Wodeyar IV. It was originally constructed to host the Viceroy of India, and its architecture reflects a majestic European style, particularly influenced by Italian and English Renaissance designs. The palace features large domes, tall columns, stained glass windows, marble staircases, and spacious banquet halls, giving it a luxurious and royal appearance. It later became a heritage hotel, allowing visitors to experience the elegance and hospitality of Mysore’s royal era. Today, the Lalitha Mahal Palace stands as a symbol of Mysore’s regal charm and architectural grandeur.",
       highlights: [
         "Italian Renaissance architecture",
         "Belgian glass dome",
@@ -91,6 +96,7 @@ const Heritage = () => {
       ],
       timings: "Open for hotel guests and visitors",
       bestTime: "Afternoon tea for non-staying guests",
+      audioUrl: "/audio/lalitha-mahal-palace.mp3", // Assuming audio is in public/audio
     },
   ];
 
