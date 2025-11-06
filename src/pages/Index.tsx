@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { ScrollText, Music, Landmark } from "lucide-react";
 import palaceHero from "@/assets/palace-hero.jpg";
-import historyIcon from "@/assets/history-icon.jpg";
+import history1 from "@/assets/history1.jpg";
 import cultureIcon from "@/assets/culture-icon.jpg";
 import heritageIcon from "@/assets/heritage-icon.jpg";
 import { Button } from "@/components/ui/button";
@@ -16,7 +16,7 @@ const Index = () => {
       title: "History",
       description: "Journey through centuries of royal legacy",
       icon: ScrollText,
-      image: historyIcon,
+      image: history1,
       path: "/home/history",
       gradient: "from-primary/20 to-secondary/20",
     },
