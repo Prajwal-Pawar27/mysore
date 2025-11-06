@@ -19,7 +19,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<QRDisplay url="http://localhost:5173" />} />
+          <Route path="/" element={<QRDisplay url="https://ethnic-nu.vercel.app/home" />} />
           <Route path="/home" element={<Index />} />
           <Route path="/history" element={<History />} />
           <Route path="/culture" element={<Culture />} />
