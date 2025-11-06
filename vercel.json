@@ -1,11 +1,16 @@
 {
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ],
   "build": {
     "env": {
       "NODE_ENV": "production"
     }
   },
-  "trailingSlash": false
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/", "dest": "/index.html" },
+    { "src": "/home", "dest": "/index.html" },
+    { "src": "/home/history", "dest": "/index.html" },
+    { "src": "/home/culture", "dest": "/index.html" },
+    { "src": "/home/heritage", "dest": "/index.html" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
 }
