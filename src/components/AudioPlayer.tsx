@@ -58,7 +58,12 @@ export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
     if (isPlaying) {
       audio.pause();
     } else {
-      audio.play();
+      try {
+        audio.play();
+      } catch (error) {
+        console.error("Audio playback blocked:", error);
+        // Optionally, you could set state here to show a message to the user
+      }
     }
     setIsPlaying(!isPlaying);
   };
