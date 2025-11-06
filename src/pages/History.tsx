@@ -2,6 +2,7 @@ import { ArrowLeft, Crown, Castle, Book, ScrollText } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { AudioPlayer } from "@/components/AudioPlayer";
+import historyIcon from "@/assets/history1.jpg";
 
 const History = () => {
   const navigate = useNavigate();
@@ -57,7 +58,7 @@ const History = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="hover:bg-primary/10"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -74,16 +75,22 @@ const History = () => {
       </header>
 
       {/* Hero Banner */}
-      <section className="relative h-64 md:h-80 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-20" />
+      <section className="relative h-64 md:h-80 overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={historyIcon}
+            alt="Mysuru History"
+            className="w-full h-full object-cover opacity-75"
+          />
+          
         </div>
+        
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          <ScrollText className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 text-primary" />
-          <h2 className="text-3xl md:text-5xl font-display font-bold text-foreground mb-2">
+          <ScrollText className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4 text-black" />
+          <h2 className="text-3xl md:text-5xl font-display font-bold text-black mb-2">
             Mysuru Through the Ages
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground font-body italic max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-black/90 font-body italic max-w-2xl mx-auto">
             From ancient kingdoms to modern heritage - a chronicle of royal grandeur
           </p>
         </div>
@@ -153,13 +160,13 @@ const History = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => navigate("/culture")}
+              onClick={() => navigate("/home/culture")}
               className="royal-button"
             >
               Explore Culture
             </Button>
             <Button
-              onClick={() => navigate("/heritage")}
+              onClick={() => navigate("/home/heritage")}
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10"
             >

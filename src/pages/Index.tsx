@@ -4,6 +4,8 @@ import palaceHero from "@/assets/palace-hero.jpg";
 import historyIcon from "@/assets/history-icon.jpg";
 import cultureIcon from "@/assets/culture-icon.jpg";
 import heritageIcon from "@/assets/heritage-icon.jpg";
+import { Button } from "@/components/ui/button";
+import { Scan } from "lucide-react";
 
 const Index = () => {
   const navigate = useNavigate();
@@ -15,7 +17,7 @@ const Index = () => {
       description: "Journey through centuries of royal legacy",
       icon: ScrollText,
       image: historyIcon,
-      path: "/history",
+      path: "/home/history",
       gradient: "from-primary/20 to-secondary/20",
     },
     {
@@ -24,7 +26,7 @@ const Index = () => {
       description: "Experience the arts, music, and traditions",
       icon: Music,
       image: cultureIcon,
-      path: "/culture",
+      path: "/home/culture",
       gradient: "from-secondary/20 to-accent/20",
     },
     {
@@ -33,7 +35,7 @@ const Index = () => {
       description: "Discover architectural marvels and landmarks",
       icon: Landmark,
       image: heritageIcon,
-      path: "/heritage",
+      path: "/home/heritage",
       gradient: "from-accent/20 to-primary/20",
     },
   ];
@@ -46,18 +48,25 @@ const Index = () => {
           <img
             src={palaceHero}
             alt="Mysore Palace"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover opacity-75"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-royal-maroon/80 via-royal-maroon/60 to-background" />
         </div>
         
         <div className="relative z-10 text-center px-4 animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-cream mb-4 tracking-wide">
+          <h1 className="text-5xl md:text-7xl font-display font-bold text-black mb-4 tracking-wide">
             Mysuru Unveiled
           </h1>
-          <p className="text-xl md:text-2xl text-cream/90 font-body italic mb-2">
+          <p className="text-xl md:text-2xl text-black/90 font-body italic mb-2">
             ಮೈಸೂರು - The City of Royal Heritage
           </p>
+          <Button
+            onClick={() => navigate("/home")}
+            className="royal-button mt-8 flex items-center gap-2"
+          >
+            <Scan className="w-5 h-5" />
+            Discover with QR
+          </Button>
           <div className="w-32 h-1 mx-auto mt-6 bg-gradient-to-r from-transparent via-primary to-transparent" />
         </div>
       </section>

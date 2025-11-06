@@ -94,7 +94,7 @@ const Culture = () => {
           <Button
             variant="ghost"
             size="icon"
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="hover:bg-primary/10"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -115,16 +115,16 @@ const Culture = () => {
         <img
           src={cultureIcon}
           alt="Mysuru Culture"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-75"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-secondary/80 via-secondary/60 to-background" />
         
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 animate-fade-in">
           <div>
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-cream mb-4">
+            <h2 className="text-4xl md:text-6xl font-display font-bold text-black mb-4">
               Cultural Tapestry
             </h2>
-            <p className="text-xl md:text-2xl text-cream/90 font-body italic max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-black/90 font-body italic max-w-3xl mx-auto">
               Where ancient traditions meet artistic excellence in perfect harmony
             </p>
           </div>
@@ -202,7 +202,7 @@ const Culture = () => {
             followed by thousands of spectators celebrating this royal tradition.
           </p>
           <Button
-            onClick={() => navigate("/heritage")}
+            onClick={() => navigate("/home/heritage")}
             className="royal-button"
           >
             Explore Heritage Sites

@@ -123,16 +123,16 @@ const Heritage = () => {
         <img
           src={heritageIcon}
           alt="Mysuru Heritage"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-75"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-accent/80 via-accent/60 to-background" />
         
         <div className="absolute inset-0 flex items-center justify-center text-center px-4 animate-fade-in">
           <div>
-            <h2 className="text-4xl md:text-6xl font-display font-bold text-cream mb-4">
+            <h2 className="text-4xl md:text-6xl font-display font-bold text-black mb-4">
               Architectural Marvels
             </h2>
-            <p className="text-xl md:text-2xl text-cream/90 font-body italic max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-black/90 font-body italic max-w-3xl mx-auto">
               Monuments that stand as testaments to royal grandeur and artistic brilliance
             </p>
           </div>
@@ -235,13 +235,13 @@ const Heritage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
-              onClick={() => navigate("/history")}
+              onClick={() => navigate("/home/history")}
               className="royal-button"
             >
               Learn the History
             </Button>
             <Button
-              onClick={() => navigate("/culture")}
+              onClick={() => navigate("/home/culture")}
               variant="outline"
               className="border-primary text-primary hover:bg-primary/10"
             >
