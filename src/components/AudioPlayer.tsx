@@ -81,7 +81,8 @@ export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
 
   return (
     <div className="bg-gradient-to-br from-primary/10 to-secondary/10 p-4 rounded-lg border border-primary/20 animate-fade-in">
-      <audio ref={audioRef} src={audioUrl} key={audioUrl} />
+      <audio ref={audioRef} key={audioUrl} />
+
       
       <div className="flex items-center gap-3 mb-3">
         <Button
