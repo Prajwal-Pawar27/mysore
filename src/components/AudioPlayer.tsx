@@ -6,9 +6,12 @@ import { Slider } from "@/components/ui/slider";
 interface AudioPlayerProps {
   audioUrl?: string;
   title: string;
+  id: string; // Unique ID for this audio player instance
+  onPlay: (id: string) => void; // Callback when this player starts playing
+  currentPlayingId: string | null; // ID of the audio currently playing across all players
 }
 
-export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
+export const AudioPlayer = ({ audioUrl, title, id, onPlay, currentPlayingId }: AudioPlayerProps) => {
   console.log("AudioPlayer: Initial render with audioUrl", audioUrl);
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
@@ -60,6 +63,16 @@ export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
     };
   }, [audioUrl]); // Rerun effect when audioUrl changes
 
+  // Effect to pause if another audio player starts playing
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (audio && isPlaying && currentPlayingId !== id) {
+      console.log(`AudioPlayer ${id}: Pausing because another audio (${currentPlayingId}) started playing.`);
+      audio.pause();
+      setIsPlaying(false);
+    }
+  }, [currentPlayingId]);
+
   const togglePlay = () => {
     const audio = audioRef.current;
     if (!audio) {
@@ -71,17 +84,19 @@ export const AudioPlayer = ({ audioUrl, title }: AudioPlayerProps) => {
     if (isPlaying) {
       audio.pause();
       console.log("AudioPlayer togglePlay: Audio paused.");
+      setIsPlaying(false); // Ensure state is consistent
+      onPlay(null); // Notify parent that no audio is playing from this player
     } else {
+      onPlay(id); // Notify parent that THIS audio is starting to play
       try {
         audio.play();
         console.log("AudioPlayer togglePlay: Attempting to play audio.");
+        setIsPlaying(true); // Ensure state is consistent
       } catch (error) {
         console.error("Audio playback blocked:", error);
-        // Optionally, you could set state here to show a message to the user
+        onPlay(null); // Notify parent of failure
       }
     }
-    setIsPlaying(!isPlaying);
-    console.log("AudioPlayer togglePlay: isPlaying after toggle:", !isPlaying);
   };
 
   const handleSliderChange = (value: number[]) => {
