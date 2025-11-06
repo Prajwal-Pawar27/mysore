@@ -72,7 +72,7 @@ const Heritage = () => {
       ],
       timings: "5:00 AM - 6:00 PM",
       bestTime: "Morning mass or during Christmas celebrations",
-      audioUrl: "/audio/st-philomenas-cathedral.mp3", // Assuming audio is in public/audio
+      audioUrl: "/audio/philomena-cathedral.mp3", // Assuming audio is in public/audio
     },
     {
       name: "Jaganmohan Palace",
@@ -87,7 +87,7 @@ const Heritage = () => {
       ],
       timings: "8:30 AM - 5:30 PM",
       bestTime: "Morning hours for peaceful exploration",
-      audioUrl: "/audio/jaganmohan-palace.mp3", // Assuming audio is in public/audio
+      audioUrl: "/audio/jagamohan-palace.mp3", // Assuming audio is in public/audio
     },
     {
       name: "Lalitha Mahal Palace",
