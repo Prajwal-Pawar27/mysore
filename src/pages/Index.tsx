@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ScrollText, Music, Landmark } from "lucide-react";
-import palaceHero from "@/assets/palace-hero.jpg";
+import palaceHero from "@/assets/palace-hero.png";
 import history1 from "@/assets/history1.jpg";
 import cultureIcon from "@/assets/culture-icon.jpg";
 import heritageIcon from "@/assets/heritage-icon.jpg";
