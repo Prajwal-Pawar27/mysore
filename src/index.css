@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Mysuru Royal Palette */
+    --background: 45 100% 97%;
+    --foreground: 350 60% 15%;
+
+    --card: 40 100% 98%;
+    --card-foreground: 350 60% 15%;
+
+    --popover: 40 100% 98%;
+    --popover-foreground: 350 60% 15%;
+
+    /* Royal Gold */
+    --primary: 43 48% 58%;
+    --primary-foreground: 45 100% 97%;
+
+    /* Deep Maroon */
+    --secondary: 350 60% 25%;
+    --secondary-foreground: 45 100% 97%;
+
+    /* Cream/Muted */
+    --muted: 45 80% 92%;
+    --muted-foreground: 350 30% 40%;
+
+    /* Palace Blue */
+    --accent: 200 60% 25%;
+    --accent-foreground: 45 100% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 45 100% 97%;
+
+    --border: 43 40% 85%;
+    --input: 43 40% 85%;
+    --ring: 43 48% 58%;
+
+    --radius: 0.75rem;
+    
+    /* Royal Design Tokens */
+    --royal-gold: 43 48% 58%;
+    --royal-gold-light: 43 60% 70%;
+    --royal-maroon: 350 60% 25%;
+    --royal-maroon-dark: 350 70% 15%;
+    --palace-blue: 200 60% 25%;
+    --palace-blue-light: 200 50% 40%;
+    --cream: 45 100% 97%;
+    --cream-dark: 45 80% 92%;
+    
+    /* Gradients */
+    --gradient-royal: linear-gradient(135deg, hsl(var(--royal-gold)) 0%, hsl(var(--royal-maroon)) 100%);
+    --gradient-palace: linear-gradient(180deg, hsl(var(--palace-blue)) 0%, hsl(var(--royal-maroon-dark)) 100%);
+    --gradient-shimmer: linear-gradient(90deg, transparent 0%, hsl(var(--royal-gold-light) / 0.3) 50%, transparent 100%);
+    
+    /* Shadows */
+    --shadow-royal: 0 10px 40px -10px hsl(var(--royal-gold) / 0.4);
+    --shadow-elevated: 0 20px 60px -15px hsl(var(--royal-maroon) / 0.3);
+    
+    /* Animations */
+    --transition-royal: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 350 30% 8%;
+    --foreground: 45 100% 97%;
+
+    --card: 350 40% 12%;
+    --card-foreground: 45 100% 97%;
+
+    --popover: 350 40% 12%;
+    --popover-foreground: 45 100% 97%;
+
+    --primary: 43 48% 58%;
+    --primary-foreground: 350 60% 15%;
+
+    --secondary: 350 50% 20%;
+    --secondary-foreground: 45 100% 97%;
+
+    --muted: 350 30% 18%;
+    --muted-foreground: 45 60% 70%;
+
+    --accent: 200 50% 30%;
+    --accent-foreground: 45 100% 97%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 45 100% 97%;
+
+    --border: 350 30% 20%;
+    --input: 350 30% 20%;
+    --ring: 43 48% 58%;
+    
+    --sidebar-background: 350 40% 10%;
+    --sidebar-foreground: 45 100% 97%;
+    --sidebar-primary: 43 48% 58%;
+    --sidebar-primary-foreground: 350 60% 15%;
+    --sidebar-accent: 350 30% 15%;
+    --sidebar-accent-foreground: 45 100% 97%;
+    --sidebar-border: 350 30% 18%;
+    --sidebar-ring: 43 48% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  /* Royal Card with Shimmer Effect */
+  .royal-card {
+    @apply relative overflow-hidden rounded-lg border-2 transition-all duration-500;
+    @apply hover:shadow-[0_20px_60px_-15px_hsl(var(--royal-gold)/0.4)];
+    @apply hover:-translate-y-2;
+  }
+  
+  .royal-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-shimmer);
+    transition: left 0.6s;
+  }
+  
+  .royal-card:hover::before {
+    left: 100%;
+  }
+  
+  /* Ornamental Border */
+  .ornamental-border {
+    @apply relative;
+  }
+  
+  .ornamental-border::after {
+    content: '';
+    @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-24 h-1 bg-gradient-to-r from-transparent via-primary to-transparent;
+  }
+  
+  /* Royal Button */
+  .royal-button {
+    @apply relative overflow-hidden bg-gradient-to-r from-primary to-primary/80;
+    @apply text-primary-foreground font-semibold px-8 py-3 rounded-lg;
+    @apply transition-all duration-300 hover:shadow-[0_10px_40px_-10px_hsl(var(--royal-gold)/0.6)];
+    @apply hover:scale-105;
+  }
+  
+  /* Fade In Animation */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Shimmer Animation */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+  
+  .shimmer {
+    animation: shimmer 3s infinite linear;
+    background: linear-gradient(90deg, transparent 0%, hsl(var(--royal-gold-light) / 0.3) 50%, transparent 100%);
+    background-size: 1000px 100%;
+  }
+}
