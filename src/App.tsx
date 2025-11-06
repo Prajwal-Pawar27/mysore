@@ -21,10 +21,10 @@ const App = () => (
         <Routes>
           <Route path="/" element={<QRDisplay url="https://mysore-gilt.vercel.app/home" />} />
           <Route path="/home" element={<Index />} />
-          <Route path="/history" element={<History />} />
-          <Route path="/culture" element={<Culture />} />
-          <Route path="/heritage" element={<Heritage />} />
-          <Route path="/qr-scan" element={<QRDisplay url="http://localhost:5173" />} />
+          <Route path="/home/history" element={<History />} />
+          <Route path="/home/culture" element={<Culture />} />
+          <Route path="/home/heritage" element={<Heritage />} />
+          <Route path="/qr-scan" element={<QRDisplay url="https://mysore-gilt.vercel.app/home" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
